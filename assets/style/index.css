@@ -94,7 +94,7 @@ i {
 }
 
 .lobby-container ul li {
-  background: #EAE0DA;
+  background: white;
   padding: 10px 18px;
   width: 70px;
   text-align: center;
@@ -282,7 +282,7 @@ i {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  color: #EAE0DA;
+  color: white;
 }
 
 .lobby-container h3 {
@@ -309,7 +309,7 @@ i {
 }
 
 .lobby-container .list-container .wine-card {
-  background: #EAE0DA;
+  background: white;
   border-radius: 25px;
   padding: 20px;
   overflow: hidden;
@@ -344,7 +344,6 @@ i {
   background: url("../img/card-bg.jpg") center 75%/cover;
   top: 0;
   left: 0;
-  opacity: 0.55;
   border-radius: 0 0 120px 45%/60px;
 }
 
@@ -448,6 +447,9 @@ i {
   margin: 0 auto;
   padding: 20px 0 0 20px;
   max-height: 300px;
+  position: relative;
+  right: 60px;
+  top: 80px;
 }
 
 @media screen and (max-width: 550px) {
@@ -481,6 +483,6 @@ nav ul {
 nav ul .fas {
   font-size: 2rem;
   margin: 18px 25px 0 0;
-  color: #EAE0DA;
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */

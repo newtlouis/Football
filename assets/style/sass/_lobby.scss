@@ -211,7 +211,7 @@
         background: url("../img/card-bg.jpg") center 75% / cover;
         top: 0;
         left: 0;
-        opacity: 0.55;
+        // opacity: 0.55;
         border-radius: 0 0 120px 45%/60px;
       }
 
@@ -294,6 +294,9 @@
         margin: 0 auto;
         padding: 20px 0 0 20px;
         max-height: 300px;
+        position: relative;
+        right: 60px;
+        top: 80px;
 
         @media screen and (max-width: 550px) {
           height: 200px;
