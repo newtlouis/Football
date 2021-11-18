@@ -2,7 +2,7 @@
   <ul>
     <li class="name">
       <i class="fas fa-search"></i>
-      <input type="search" class="search" placeholder="Entrez le nom d'un joueur...">
+      <input v-model="searchKey"  @keyup.enter="search" type="search" class="search" placeholder="Entrez le nom d'un joueur...">
     </li>
 
     <li class="country">
