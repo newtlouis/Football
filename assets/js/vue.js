@@ -4,7 +4,9 @@ const vue = new Vue({
         return {
             players: [],
             searchKey: "",
-            inputType: ""
+            inputType: "",
+            countryList:[],
+            countryOption: []
         }
     },
 
@@ -32,6 +34,23 @@ const vue = new Vue({
     mounted() {
         axios.get("http://localhost:3001/api/search/")
             .then(res => this.players = res.data.message)
+            .then(()=> {
+                for(let player of this.players){
+                    if(!this.countryList.includes(player.player.nationality)){
+                        this.countryList.push(player.player.nationality)
+                    }
+                }
+            })
             .catch(e => console.log(e));
+
+            setTimeout(()=>{
+                let arr = this.countryList.sort();
+                for(let i =0; i< arr.length; i++){
+                    this.countryOption.push({
+                        name: arr[i],
+                        id: arr[i]
+                    })
+                }
+            }, 500);
     }
 }).$mount("#vue-app");

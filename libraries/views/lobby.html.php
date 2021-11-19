@@ -8,7 +8,7 @@
     <li @click="searchInputType('country')" class="country">
       <i class="fas fa-globe-europe"></i>
       <select v-show="inputType = 'country'" name="" id="">
-        <option value="">Choisissez un pays</option>
+        <option v-for="option in countryOption" :value="option.id">{{option.name}}</option>
       </select>
     </li>
 
