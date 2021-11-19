@@ -1,18 +1,25 @@
 <div id="vue-app" class="lobby-container">
   <ul>
-    <li class="name">
+    <li @click="searchInputType('name')" class="name">
       <i class="fas fa-search"></i>
-      <input v-model="searchKey"  @keyup.enter="search" type="search" class="search" placeholder="Entrez le nom d'un joueur...">
+      <input v-if="inputType = 'name'" v-model="searchKey"  @keyup.enter="search" type="search" class="search" placeholder="Entrez le nom d'un joueur...">
     </li>
 
-    <li class="country">
+    <li @click="searchInputType('country')" class="country">
       <i class="fas fa-globe-europe"></i>
+      <select v-show="inputType = 'country'" name="" id="">
+        <option value="">Choisissez un pays</option>
+      </select>
     </li>
 
-    <li class="grapes">
+    <li @click="searchInputType('poste')" class="grapes">
       <i class="fas fa-wine-glass-alt"></i>
+      <div v-if="inputType = 'poste'" class="radio-container"></div>
     </li>
   </ul>
+
+  <h1 v-if = "inputType = ''" class="title" >Liste des joueurs</h1>
+  <h3 v-if = "players.length == 0" >Aucun résultat</h3>
 
   <div class="list-container">
     <div v-for="player, id in players" :key="id" class="wine-list">

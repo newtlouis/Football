@@ -3,7 +3,8 @@ const vue = new Vue({
     data: () => {
         return {
             players: [],
-            searchKey: ""
+            searchKey: "",
+            inputType: ""
         }
     },
 
@@ -22,6 +23,9 @@ const vue = new Vue({
     methods: {
         removeItem(id) {
             this.$delete(this.players, id);
+        },
+        searchInputType(param){
+            this.inputType = param;
         }
     },
 
